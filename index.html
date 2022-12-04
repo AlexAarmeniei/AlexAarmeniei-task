@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task</title>
+
+    <link rel="stylesheet" href="libs/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="libs/css/style.css" />
+  </head>
+  <body>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>API Name</th>
+          <th>API description</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <a href="https://www.geonames.org/export/web-services.html#timezone"
+              >timezone</a
+            >
+          </td>
+          <td>
+            <p>Date and Time</p>
+            <select id="countryTime">
+              <option value="UK">UK</option>
+              <option value="France">France</option>
+              <option value="USA">USA</option>
+              <option value="China">China</option>
+            </select>
+          </td>
+          <td>
+            <button type="button" class="btn btn-primary" id="btnTimezone">
+              Submit
+            </button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <a
+              href="https://www.geonames.org/export/JSON-webservices.html#weatherJSON"
+              >weather</a
+            >
+          </td>
+          <td>
+            <p>Weather</p>
+            <select id="countryWeather">
+              <option value="UK">UK</option>
+              <option value="France">France</option>
+              <option value="USA">USA</option>
+              <option value="China">China</option>
+            </select>
+          </td>
+          <td>
+            <button type="button" class="btn btn-primary" id="btnWeather">
+              Submit
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td scope="row">
+            <a
+              href="https://www.geonames.org/export/wikipedia-webservice.html#wikipediaSearch"
+              >wikipediaSearch</a
+            >
+          </td>
+          <td scope="row">
+            <p>Wiki search:</p>
+            <input type="text" id="wiki" />
+          </td>
+          <td scope="row">
+            <button type="button" class="btn btn-primary" id="btnWiki">
+              Submit
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <p><span id="country"></span><span id="date"></span></p>
+            <p><span id="temperature"></span></p>
+            <p><span id="clouds"></span></p>
+            <p id="title"></p>
+            <p id="summary"></p>
+            <a id="wikiUrl"></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <script
+      type="application/javascript"
+      src="libs/vendors/jquery-2.2.3.min.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="libs/js/scriptTimezone.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="libs/js/scriptWeather.js"
+    ></script>
+    <script
+      type="application/javascript"
+      src="libs/js/scriptWikipedia.js"
+    ></script>
+  </body>
+</html>
